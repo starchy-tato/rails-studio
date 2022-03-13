@@ -1,0 +1,24 @@
+<h1>Editing <%= @movie.title %></h1>
+
+<section class="details">
+  <%= form_with(model: @movie, local: true) do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 7 %>
+
+    <%= form.label :rating %>
+    <%= form.text_field :rating %>
+
+    <%= form.label :released_on %>
+    <%= form.date_field :released_on %>
+
+    <%= form.label :total_gross %>
+    <%= form.number_field :total_gross %>
+
+    <%= form.submit %>
+  <% end %>
+</section>
+
+
