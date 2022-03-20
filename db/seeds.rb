@@ -15,7 +15,10 @@ Movie.create!([
     }.squish,
     released_on: "2014-04-04",
     rating: 'PG-13',
-    total_gross: 714_401_889
+    total_gross: 714_401_889,
+    director: 'Anthony Russo & Joe Russo',
+    duration: '136 min',
+    image_file_name: 'captainamerica2.png'
   },
   {
     title: 'Avengers: Endgame',
@@ -27,7 +30,10 @@ Movie.create!([
     }.squish,
     released_on: "2019-04-26",
     rating: 'PG-13',
-    total_gross: 1_223_641_414
+    total_gross: 1_223_641_414,
+    director: 'Anthony Russo',
+    duration: '181 min',
+    image_file_name: 'avengers-end-game.png'
   },
   {
     title: 'Captain Marvel',
@@ -37,7 +43,10 @@ Movie.create!([
     }.squish,
     released_on: "2019-03-08",
     rating: 'PG-13',
-    total_gross: 1_110_662_849
+    total_gross: 1_110_662_849,
+    director: 'Anna Boden',
+    duration: '124 min',
+    image_file_name: 'captain-marvel.png'
   },
   {
     title: 'Black Panther',
@@ -47,7 +56,10 @@ Movie.create!([
     }.squish,
     released_on: "2018-02-16",
     rating: 'PG-13',
-    total_gross: 1_346_913_161
+    total_gross: 1_346_913_161,
+    director: 'Ryan Coogler',
+    duration: '134 min',
+    image_file_name: 'black-panther.png'
   },
   {
     title: 'Avengers: Infinity War',
@@ -57,7 +69,10 @@ Movie.create!([
     }.squish,
     released_on: "2018-04-27",
     rating: 'PG-13',
-    total_gross: 2_048_359_754
+    total_gross: 2_048_359_754,
+    director: 'Anthony Russo',
+    duration: '149 min',
+    image_file_name: 'avengers-infinity-war.png'
   },
   {
     title: 'Green Lantern',
@@ -67,7 +82,10 @@ Movie.create!([
     }.squish,
     released_on: "2011-06-17",
     rating: 'PG-13',
-    total_gross: 219_851_172
+    total_gross: 219_851_172,
+    director: 'Martin Campbell',
+    duration: '114 min',
+    image_file_name: 'green-lantern.png'
   },
   {
     title: 'Fantastic Four',
@@ -77,7 +95,10 @@ Movie.create!([
     }.squish,
     released_on: "2015-08-07",
     rating: 'PG-13',
-    total_gross: 168_257_860
+    total_gross: 168_257_860,
+    director: 'Josh Trank',
+    duration: '100 min',
+    image_file_name: 'fantastic-four.png'
   },
   {
     title: 'Iron Man',
@@ -89,7 +110,10 @@ Movie.create!([
     }.squish,
     released_on: "2008-05-02",
     rating: 'PG-13',
-    total_gross: 585_366_247
+    total_gross: 585_366_247,
+    director: 'Jon Favreau',
+    duration: '126 min',
+    image_file_name: 'ironman.png'
   },
   {
     title: 'Superman',
@@ -101,7 +125,10 @@ Movie.create!([
     }.squish,
     released_on: "1978-12-15",
     rating: 'PG',
-    total_gross: 300_451_603
+    total_gross: 300_451_603,
+    director: 'Richard Donner',
+    duration: '143 min',
+    image_file_name: 'superman.png'
   },
   {
     title: 'Spider-Man',
@@ -114,18 +141,23 @@ Movie.create!([
     }.squish,
     released_on: "2002-05-03",
     rating: 'PG-13',
-    total_gross: 825_025_036
+    total_gross: 825_025_036,
+    director: 'Sam Raimi',
+    duration: '121 min',
+    image_file_name: 'spiderman.png'
   },
   {
     title: 'Batman',
     description:
     %{
-      The Dark Knight of Gotham City begins his war on crime with his
-      first major enemy being the clownishly homicidal Joker.
+      Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the evidence begins to lead closer to home and the scale of the perpetrator's plans become clear, he must forge new relationships, unmask the culprit and bring justice to the abuse of power and corruption that has long plagued the metropolis.
     }.squish,
-    released_on: "1989-06-23",
+    released_on: "2022-03-04",
     rating: 'PG-13',
-    total_gross: 411_348_924
+    total_gross: 472_100_575,
+    director: "Matt Reeves",
+    duration: "176 min",
+    image_file_name: "batman.png"
   },
   {
     title: "Catwoman",
@@ -135,7 +167,10 @@ Movie.create!([
     }.squish,
     released_on: "2004-07-23",
     rating: "PG-13",
-    total_gross: 82_102_379
+    total_gross: 82_102_379,
+    director: "Jean-Christophe 'Pitof' Comar",
+    duration: "101 min",
+    image_file_name: "catwoman.png"
   },
   {
     title: "Wonder Woman",
@@ -155,6 +190,9 @@ Movie.create!([
     }.squish,
     released_on: "2003-02-14",
     rating: "PG-13",
-    total_gross: 179_179_718
+    total_gross: 179_179_718,
+    director: "Mark Steven Johnson",
+    duration: "103 min",
+    image_file_name: "daredevil.png"
   }
 ])
