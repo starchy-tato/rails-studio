@@ -6,7 +6,7 @@
   <%= form.text_area :description, rows: 10 %>
 
   <%= form.label :rating %>
-  <%= form.text_field :rating %>
+  <%= form.select :rating, Movie::RATINGS, prompt: "Please Choose a Rating" %>
 
   <%= form.label :released_on %>
   <%= form.date_select :released_on, {}, {class: "date"} %>
