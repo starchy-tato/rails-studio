@@ -8,6 +8,7 @@ $light-gray: #c2c2c2;
 $blue: #237cbe;
 $light-blue: lighten($blue, 40%);
 $orange: #e8890c;
+$light-orange: #ffe6cc;
 $yellow: #ffc107;
 $light-yellow: #ffc;
 $red: #dc3545;
@@ -19,7 +20,7 @@ $accent-color: $orange;
 $secondary-link-color: $light-blue;
 $border-color: $light-gray;
 $error-color: $red;
-$error-background-color: $light-yellow;
+$error-background-color: $light-orange;
 $sold-out-color: $yellow;
 $box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.09);
 
