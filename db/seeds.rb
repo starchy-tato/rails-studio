@@ -5,6 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+#   Can created reviews associated with a movie by:
+#     movie = Movie.find_by(title: "Captain Marvel")
+#
+#     movie.reviews.create!(name: "Larry", stars: 5, comment: "Awesome!")
+#
+#   Run to recreate db from scratch and populate with this file: rails db:reset
 
 Movie.create!([
   {
