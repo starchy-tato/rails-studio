@@ -4,8 +4,11 @@
   <h2><%= mail_to(@user.email) %></h2>
   <h3>
     Member Since:
-    <p>
-      <%= @user.created_at.strftime("%B %Y") %>
-    </p>
   </h3>
+  <p>
+    <%= @user.created_at.strftime("%B %Y") %>
+  </p>
+  <div class="actions">
+    <%= link_to "Edit Account", edit_user_path(@user), class: "button edit" %>
+  </div>
 </section>

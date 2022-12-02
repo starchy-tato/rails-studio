@@ -13,6 +13,10 @@
   <%= form.label :password_confirmation, "Confirm Password" %>
   <%= form.password_field :password_confirmation %>
 
-  <%= form.submit %>
+  <% if user.new_record? %>
+    <%= form.submit "Create Account" %>
+  <% else %>
+    <%= form.submit "Update Account" %>
+  <% end %>
 
 <% end %>
