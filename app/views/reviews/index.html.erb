@@ -6,7 +6,7 @@
       <%= pluralize(review.stars, 'star') %>
       <p>
         <%= profile_image(review.user, 35) %>
-        <%= link_to review.user.name, review.user %>
+        <%= link_to review.user.username, review.user %>
         <span class="date">
           <%= time_ago_in_words(review.created_at) %> ago
         </span>
