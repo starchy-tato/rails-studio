@@ -2,14 +2,18 @@
   <div class="image">
     <%= image_tag @movie.image_file_name %>
 
+  <% if current_user %>
     <div class="faves">
-      <% if current_user %>
-        <%= button_to 'Fav <3', movie_favourites_path(@movie) %>
+      <% if @favourite %>
+        <%= button_to "♡ Unfave", movie_favourite_path(@movie, @favourite), method: :delete %>
+      <% else %>
+        <%= button_to "♥️ Fave", movie_favourites_path(@movie) %>
       <% end %>
       <div class="count">
         <%= @fans.size %>
       </div>
     </div>
+  <% end %>
   </div>
 
   <div class="details">
