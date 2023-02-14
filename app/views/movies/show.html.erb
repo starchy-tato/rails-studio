@@ -1,7 +1,7 @@
 <section class="movie-details">
   <div class="image">
     <%= image_tag @movie.image_file_name %>
-    
+
     <div class="faves">
       <% if current_user %>
         <%= button_to 'Fav <3', movie_favourites_path(@movie) %>
