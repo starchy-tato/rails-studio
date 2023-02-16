@@ -13,6 +13,11 @@
 #
 #   Run to recreate db from scratch and populate with this file: rails db:reset
 
+Genre.create!([
+  { name: "Action" }, { name: "Comedy" }, { name: "Drama" }, { name: "Romance" }, { name: "Thriller" },
+  { name: "Fantasy" }, { name: "Documentary" }, { name: "Adventure" }, { name: "Animation" }, { name: "Sci-Fi" }
+])
+
 Movie.create!([
   {
     title: 'Captain America: Winter Soldier',
