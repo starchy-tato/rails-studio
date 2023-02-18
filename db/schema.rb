@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_16_043121) do
+ActiveRecord::Schema.define(version: 2023_02_18_072850) do
+
+  create_table "characterizations", force: :cascade do |t|
+    t.integer "movie_id", null: false
+    t.integer "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_characterizations_on_genre_id"
+    t.index ["movie_id"], name: "index_characterizations_on_movie_id"
+  end
 
   create_table "favourites", force: :cascade do |t|
     t.integer "movie_id", null: false
@@ -60,6 +69,8 @@ ActiveRecord::Schema.define(version: 2023_02_16_043121) do
     t.boolean "admin", default: false
   end
 
+  add_foreign_key "characterizations", "genres"
+  add_foreign_key "characterizations", "movies"
   add_foreign_key "favourites", "movies"
   add_foreign_key "favourites", "users"
   add_foreign_key "reviews", "movies"
