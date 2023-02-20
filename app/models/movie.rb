@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  has_many :reviews, dependent: :destroy
+  has_many :reviews, -> { order(created_at: :desc) }, dependent: :destroy
   has_many :critics, through: :reviews, source: :user
 
   has_many :favourites, dependent: :destroy
@@ -23,6 +23,8 @@ class Movie < ApplicationRecord
   scope :recent, -> (max = 5) { released.limit(max) }
   scope :hits, -> { released.where("total_gross >= 300000000").order(total_gross: :desc) }
   scope :flops, -> { released.where("total_gross < 225000000").order(total_gross: :asc) }
+  scope :grossed_less_than, -> (amount) { where("total_gross < ?", amount) }
+  scope :grossed_more_than, -> (amount) { where("total_gross > ?", amount) }
 
   def flop?
     total_gross.blank? || total_gross < 225_000_000
