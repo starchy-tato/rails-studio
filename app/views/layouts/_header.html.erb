@@ -11,6 +11,12 @@
       <li>
         <%= link_to("Recent", filtered_movies_path(:recent)) %>
       </li>
+      <li>
+        <%= link_to("Hits", filtered_movies_path(:hits)) %>
+      </li>
+      <li>
+        <%= link_to("Flops", filtered_movies_path(:flops)) %>
+      </li>
     </ul>
     <ul class="right">
       <% if current_user %>
