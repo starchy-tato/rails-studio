@@ -9,4 +9,6 @@ class Review < ApplicationRecord
     in: STARS,
     message: "Please enter a number between 1 & 5"
   }
+
+  scope :past_n_days, -> (days) { where("created_at >= ?", days.days.ago) }
 end
