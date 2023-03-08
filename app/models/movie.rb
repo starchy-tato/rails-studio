@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+  before_save :set_slug
+
   has_many :reviews, -> { order(created_at: :desc) }, dependent: :destroy
   has_many :critics, through: :reviews, source: :user
 
@@ -8,7 +10,8 @@ class Movie < ApplicationRecord
   has_many :characterizations, dependent: :destroy
   has_many :genres, through: :characterizations
 
-  validates :title, :released_on, :duration, presence: true
+  validates :title, presence: true, uniqueness: true
+  validates :released_on, :duration, presence: true
   validates :description, length: {minimum: 25}
   validates :total_gross, numericality: { greater_than_or_equal_to: 0}
   validates :image_file_name, format: {
@@ -36,6 +39,15 @@ class Movie < ApplicationRecord
 
   def average_stars
     reviews.average(:stars) || 0.0
+  end
+
+  def to_param
+    slug
+  end
+
+  private
+  def set_slug
+    self.slug = title.parameterize
   end
 
 end
